@@ -1,6 +1,18 @@
 import React from "react";
 
-export default function Picker({head, setHead, middle, setMiddle, bottom, setBottom, newPhrase, setNewPhrase, handleClick}){
+export default function Picker({
+    head, setHead, 
+    middle, setMiddle, 
+    bottom, setBottom, 
+    newPhrase, setNewPhrase, 
+    handleClick,
+    timesChangedHead,setTimesChangedHead,
+    timesChangedMiddle, setTimesChangedMiddle,
+    timesChangedBottom, setTimesChangedBottom,
+    handleHead
+
+
+    }){
     const headOptions = ['alien', 'cat', 'face', 'caiman']
     const middleOptions = ['hoodie', 'tmobile', 'tshirt']
     const bottomOptions = ['jeans', 'skirt', 'gold']
@@ -9,7 +21,14 @@ export default function Picker({head, setHead, middle, setMiddle, bottom, setBot
         <div>
             <label>
                 Head
-                <select value={head} onChange={(event) => setHead(event.target.value)}>
+                <select 
+                    value={head} 
+                    // onChange={(event) => (
+                    //     setHead(event.target.value)
+                    // )}
+                    onChange={(event)=>( handleHead(event))}
+                    
+                >
                     {headOptions.map((opt) =>(
                         <option key={opt}>{opt}</option>
                     ))}

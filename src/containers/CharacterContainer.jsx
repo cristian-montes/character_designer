@@ -11,11 +11,20 @@ function CharacterContainer(){
     const [phrase, setPhrase] = useState([]);
     const [newPhrase, setNewPhrase] = useState('');
 
+    const[timesChangedHead, setTimesChangedHead] = useState(0)
+    const[timesChangedMiddle, setTimesChangedMiddle] = useState(0)
+    const[timesChangedBottom, setTimesChangedBottom] = useState(0)
+
     const handleClick = () => {
         setNewPhrase('')
         setPhrase((prevState) => [...prevState, newPhrase])
     }
-    console.log('here', phrase)
+
+    const handleHead = (event) => {
+        setHead(event.target.value);
+        setTimesChangedHead(timesChangedHead+1)
+    }
+
     return(
         <div>
             <h1> Make it Fanshionable </h1>
@@ -29,9 +38,21 @@ function CharacterContainer(){
                 newPhrase={newPhrase}
                 setNewPhrase={setNewPhrase}
                 handleClick= {handleClick}
+                timesChangedHead={timesChangedHead}
+                setTimesChangedHead={setTimesChangedHead}
+                timesChangedMiddle={timesChangedMiddle}
+                setTimesChangedMiddle={setTimesChangedMiddle}
+                timesChangedBottom={timesChangedBottom}
+                setTimesChangedBottom={setTimesChangedBottom}
+                handleHead={handleHead}
                 />
             <Character head={head} middle={middle} bottom={bottom}/>
-            <Phrase phrases={phrase}/>
+            <Phrase 
+                phrases={phrase} 
+                timesChangedHead={timesChangedHead}
+                timesChangedMiddle={timesChangedMiddle}
+                timesChangedBottom={timesChangedBottom}
+            />
         </div>
     )
 }
