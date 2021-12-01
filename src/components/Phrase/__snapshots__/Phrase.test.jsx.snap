@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shows Phrases shuold render Phrases Component 1`] = `
+<div>
+  <div>
+    <p>
+       The head has been changed 
+    </p>
+    <p>
+       The body has been changed 
+    </p>
+    <p>
+       The bottom has been changed 
+    </p>
+    <p
+      style="color: white;"
+    >
+      Hello My Brudda
+    </p>
+    <p
+      style="color: white;"
+    >
+      My friend
+    </p>
+    <p
+      style="color: white;"
+    >
+      Potatoes
+    </p>
+  </div>
+</div>
+`;

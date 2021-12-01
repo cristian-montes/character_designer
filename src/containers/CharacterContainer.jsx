@@ -8,7 +8,7 @@ function CharacterContainer(){
     const [head, setHead] = useState('alien');
     const [middle, setMiddle] = useState('hoodie');
     const [bottom, setBottom] = useState('skirt');
-    const [phrase, setPhrase] = useState([]);
+    const [phrase, setPhrase] = useState(['Hello My Brudda']);
     const [newPhrase, setNewPhrase] = useState('');
 
     const[timesChangedHead, setTimesChangedHead] = useState(0)
