@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Picker({head, setHead}){
-    const headOptions = ['alien', 'cat', 'face', 'putin']
+    const headOptions = ['alien', 'cat', 'face', 'caiman']
 
     return(
         <div>
