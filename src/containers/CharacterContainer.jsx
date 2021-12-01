@@ -25,6 +25,16 @@ function CharacterContainer(){
         setTimesChangedHead(timesChangedHead+1)
     }
 
+    const handleMiddle = (event) => {
+        setMiddle(event.target.value);
+        setTimesChangedMiddle(timesChangedMiddle+1)
+    }
+
+    const handleBottom = (event) => {
+        setBottom(event.target.value);
+        setTimesChangedBottom(timesChangedBottom+1)
+    }
+
     return(
         <div>
             <h1> Make it Fanshionable </h1>
@@ -38,13 +48,10 @@ function CharacterContainer(){
                 newPhrase={newPhrase}
                 setNewPhrase={setNewPhrase}
                 handleClick= {handleClick}
-                timesChangedHead={timesChangedHead}
-                setTimesChangedHead={setTimesChangedHead}
-                timesChangedMiddle={timesChangedMiddle}
-                setTimesChangedMiddle={setTimesChangedMiddle}
-                timesChangedBottom={timesChangedBottom}
-                setTimesChangedBottom={setTimesChangedBottom}
+              
                 handleHead={handleHead}
+                handleMiddle={handleMiddle}
+                handleBottom={handleBottom}
                 />
             <Character head={head} middle={middle} bottom={bottom}/>
             <Phrase 

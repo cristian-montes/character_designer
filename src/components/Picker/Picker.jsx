@@ -6,12 +6,9 @@ export default function Picker({
     bottom, setBottom, 
     newPhrase, setNewPhrase, 
     handleClick,
-    timesChangedHead,setTimesChangedHead,
-    timesChangedMiddle, setTimesChangedMiddle,
-    timesChangedBottom, setTimesChangedBottom,
-    handleHead
-
-
+    handleHead,
+    handleMiddle,
+    handleBottom
     }){
     const headOptions = ['alien', 'cat', 'face', 'caiman']
     const middleOptions = ['hoodie', 'tmobile', 'tshirt']
@@ -23,11 +20,7 @@ export default function Picker({
                 Head
                 <select 
                     value={head} 
-                    // onChange={(event) => (
-                    //     setHead(event.target.value)
-                    // )}
                     onChange={(event)=>( handleHead(event))}
-                    
                 >
                     {headOptions.map((opt) =>(
                         <option key={opt}>{opt}</option>
@@ -37,7 +30,7 @@ export default function Picker({
 
             <label>
                 Middle
-                <select value={middle} onChange={(event) => setMiddle(event.target.value)}>
+                <select value={middle} onChange={(event) => handleMiddle(event)}>
                     {middleOptions.map((opt) =>(
                         <option key={opt}>{opt}</option>
                     ))}
@@ -45,7 +38,7 @@ export default function Picker({
             </label>
             <label>
                 Bottom
-                <select value={bottom} onChange={(event) => setBottom(event.target.value)}>
+                <select value={bottom} onChange={(event) => handleBottom(event)}>
                     {bottomOptions.map((opt) =>(
                         <option key={opt}>{opt}</option>
                     ))}
