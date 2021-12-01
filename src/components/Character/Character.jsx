@@ -3,7 +3,7 @@ import './Character.css';
 
 export default function Character({head, middle, bottom}){
     return(
-        <section>
+        <section style={{ display: 'flex', flexDirection: 'column' }}>
             <article className='head'
                 style={{
                     backgroundImage: `url(./${head}-head.png)`,
