@@ -1,14 +1,14 @@
 import './Character.css';
 
 
-export default function Character({head, middle}){
+export default function Character({head, middle, bottom}){
     return(
         <section>
             <article className='head'
                 style={{
                     backgroundImage: `url(./${head}-head.png)`,
-                    height: 200,
-                    width: 200,
+                    height: 310,
+                    width: 310,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                   }}
@@ -19,7 +19,17 @@ export default function Character({head, middle}){
                 style={{
                     backgroundImage: `url(./${middle}-middle.png)`,
                     height: 200,
-                    width: 200,
+                    width: 310,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                  }}
+            >
+            </article>
+            <article className='bottom'
+                style={{
+                    backgroundImage: `url(./${bottom}-bottom.png)`,
+                    height: 200,
+                    width: 310,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                   }}
