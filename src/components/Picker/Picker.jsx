@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Picker({head, setHead, middle, setMiddle, bottom, setBottom}){
+export default function Picker({head, setHead, middle, setMiddle, bottom, setBottom, newPhrase, setNewPhrase, handleClick}){
     const headOptions = ['alien', 'cat', 'face', 'caiman']
     const middleOptions = ['hoodie', 'tmobile', 'tshirt']
     const bottomOptions = ['jeans', 'skirt', 'gold']
@@ -32,6 +32,21 @@ export default function Picker({head, setHead, middle, setMiddle, bottom, setBot
                     ))}
                 </select>
             </label>
+            <label>
+                New Phrases
+                <input
+                    type='text'
+                    value={newPhrase}
+                    onChange={(event) => setNewPhrase(event.target.value)}
+                />
+            </label>
+            <button
+                type='button'
+                onClick={handleClick}
+            >
+                Add Sayings
+            </button>
+
         </div>
     )
 }
