@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should render Picker Component 1`] = `
+<div>
+  <div>
+    <label>
+      Head
+      <select>
+        <option>
+          alien
+        </option>
+        <option>
+          cat
+        </option>
+        <option>
+          face
+        </option>
+        <option>
+          caiman
+        </option>
+      </select>
+    </label>
+    <label>
+      Middle
+      <select>
+        <option>
+          hoodie
+        </option>
+        <option>
+          tmobile
+        </option>
+        <option>
+          tshirt
+        </option>
+      </select>
+    </label>
+    <label>
+      Bottom
+      <select>
+        <option>
+          jeans
+        </option>
+        <option>
+          skirt
+        </option>
+        <option>
+          gold
+        </option>
+      </select>
+    </label>
+    <label>
+      New Phrases
+      <input
+        type="text"
+        value=""
+      />
+    </label>
+    <button
+      type="button"
+    >
+      Add Sayings
+    </button>
+  </div>
+</div>
+`;
